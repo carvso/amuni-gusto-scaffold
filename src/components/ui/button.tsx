@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        pomodoro: "bg-pomodoro-red text-white hover:bg-pomodoro-red/90 shadow-sm",
+        basil: "bg-basil-green text-white hover:bg-basil-green/90 shadow-sm",
+        pomodoroOutline: "bg-transparent border border-pomodoro-red text-pomodoro-red hover:bg-pomodoro-red/10",
       },
       size: {
         default: "h-10 px-4 py-2",

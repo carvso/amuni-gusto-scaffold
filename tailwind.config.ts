@@ -19,6 +19,9 @@ export default {
 		},
 		extend: {
 			colors: {
+				cream: '#fffaf0',
+				'pomodoro-red': '#c0392b',
+				'basil-green': '#2e7d32',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -62,6 +65,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				'playfair': ['"Playfair Display"', 'serif'],
+				'opensans': ['"Open Sans"', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
