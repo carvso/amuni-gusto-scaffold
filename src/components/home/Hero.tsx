@@ -1,31 +1,35 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="relative">
-      <div className="h-[500px] md:h-[600px] overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-          alt="Sicilian food" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-      
-      <div className="absolute inset-0 bg-black/50 flex items-center">
-        <div className="container mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-4">
-            Il gusto della Sicilia, pronto da gustare
+    <div className="relative min-h-[85vh] flex flex-col lg:flex-row items-center">
+      {/* Left Content Section */}
+      <div className="w-full lg:w-1/2 h-full flex flex-col justify-center px-6 lg:px-16 py-20 bg-gradient-to-br from-cream via-sand to-cream">
+        <div className="max-w-xl mx-auto lg:mx-0">
+          <span className="inline-block mb-4 text-sm md:text-base text-sage uppercase tracking-wider font-opensans">
+            Sapori autentici siciliani
+          </span>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-6 text-olive">
+            Il gusto della Sicilia,{" "}
+            <span className="text-pomodoro-red">pronto da gustare</span>
           </h1>
           
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-opensans">
-            Piatti tradizionali siciliani di alta qualità, pronti da gustare a casa tua. 
+          <p className="text-lg md:text-xl text-olive/80 mb-8 font-opensans max-w-lg">
+            Scopri i nostri piatti tradizionali pronti da gustare. 
             Spedizione gratuita per ordini sopra i 40€.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="pomodoro" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button 
+              variant="pomodoro" 
+              size="lg" 
+              className="text-base"
+              asChild
+            >
               <Link to="/shop">
                 Scopri i nostri piatti
               </Link>
@@ -33,20 +37,43 @@ const Hero = () => {
             
             <Button 
               variant="pomodoroOutline" 
-              size="lg" 
-              className="bg-transparent border-white text-white hover:bg-white/20"
+              size="lg"
+              className="text-base border-2 border-pomodoro-red text-pomodoro-red hover:bg-pomodoro-red/5"
               asChild
             >
               <a href="#how-it-works">
                 Come funziona
+                <ChevronDown className="ml-2" />
               </a>
             </Button>
+          </div>
+
+          <div className="mt-12 flex items-center gap-8">
+            <div className="flex flex-col">
+              <span className="text-2xl font-playfair font-bold text-olive">+2,000</span>
+              <span className="text-sm text-olive/70">Clienti felici</span>
+            </div>
+            <div className="w-px h-12 bg-olive/20" />
+            <div className="flex flex-col">
+              <span className="text-2xl font-playfair font-bold text-olive">100%</span>
+              <span className="text-sm text-olive/70">Ingredienti siciliani</span>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Right Decorative Section */}
+      <div className="hidden lg:block w-1/2 h-full bg-sage/10">
+        <div className="relative h-full">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516100882582-96c3a05fe590?ixlib=rb-4.0.3')] bg-cover bg-center mix-blend-multiply opacity-20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-sage/30 via-transparent to-cream/50"></div>
+          <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-24 h-24 bg-pomodoro-red/20 rounded-full blur-3xl"></div>
+          <div className="absolute right-12 bottom-24 w-32 h-32 bg-sage/20 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+
       {/* Sticky mobile CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg z-50">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-md shadow-lg z-50">
         <Button variant="pomodoro" className="w-full" asChild>
           <Link to="/shop">
             Ordina Ora
