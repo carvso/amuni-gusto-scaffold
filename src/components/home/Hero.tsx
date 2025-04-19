@@ -63,10 +63,14 @@ const Hero = () => {
       </div>
 
       {/* Right Decorative Section */}
-      <div className="hidden lg:block w-1/2 h-full bg-sage/10">
-        <div className="relative h-full">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1628699265231-97b2a3e7b9be?ixlib=rb-4.0.3')] bg-cover bg-center mix-blend-multiply opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-sage/30 via-transparent to-cream/50"></div>
+      <div className="hidden lg:flex w-1/2 h-full bg-sage/10">
+        <div className="relative h-full w-full overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1628699265231-97b2a3e7b9be?ixlib=rb-4.0.3" 
+            alt="Piatto tradizionale siciliano" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-sage/50 via-transparent to-cream/50 mix-blend-multiply"></div>
           <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-24 h-24 bg-pomodoro-red/20 rounded-full blur-3xl"></div>
           <div className="absolute right-12 bottom-24 w-32 h-32 bg-sage/20 rounded-full blur-3xl"></div>
         </div>
