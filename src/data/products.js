@@ -1,4 +1,3 @@
-
 // Mock product data for Amunì Group e-commerce
 export const products = [
   {
@@ -7,7 +6,7 @@ export const products = [
     description: 'Pasta con melanzane, pomodoro, ricotta salata e basilico. Un classico piatto siciliano pronto da gustare.',
     shortDescription: 'Pasta con melanzane e ricotta salata',
     price: 12.90,
-    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdGElMjBub3JtYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3',
     category: 'primi',
     featured: true,
     ingredients: 'Pasta di semola, melanzane, pomodoro, ricotta salata, basilico, aglio, olio extravergine d\'oliva, sale',
@@ -27,7 +26,7 @@ export const products = [
     description: 'Tradizionale contorno siciliano con melanzane, olive, capperi e sedano in agrodolce. Perfetto come antipasto o contorno.',
     shortDescription: 'Melanzane in agrodolce con capperi e olive',
     price: 9.50,
-    image: 'https://images.unsplash.com/photo-1598866395120-b6d5390fcabd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fwb25hdGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+    image: 'https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-4.0.3',
     category: 'contorni',
     featured: true,
     ingredients: 'Melanzane, sedano, olive verdi, capperi, cipolla, pomodoro, aceto, zucchero, olio extravergine d\'oliva, sale, pepe',
@@ -47,7 +46,7 @@ export const products = [
     description: 'Palle di riso ripiene con ragù, piselli e formaggio, impanate e fritte. Un classico street food siciliano.',
     shortDescription: 'Palle di riso ripiene e fritte',
     price: 7.90,
-    image: 'https://images.unsplash.com/photo-1633964913295-ceb43826e7c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJhbmNpbml8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+    image: 'https://images.unsplash.com/photo-1589187775328-881e51f3c75e?ixlib=rb-4.0.3',
     category: 'street food',
     featured: true,
     ingredients: 'Riso, carne macinata, piselli, formaggio, pomodoro, uova, pangrattato, sale, pepe',
@@ -67,7 +66,7 @@ export const products = [
     description: 'Dolci tubolari con croccante cialda di pasta fritta ripiena di ricotta dolce, scaglie di cioccolato e scorza d\'arancia candita.',
     shortDescription: 'Dolci ripieni di ricotta e cioccolato',
     price: 8.50,
-    image: 'https://images.unsplash.com/photo-1583953583950-314c0b756a85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2Fubm9saXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    image: 'https://images.unsplash.com/photo-1609598772711-49bb58a8f269?ixlib=rb-4.0.3',
     category: 'dolci',
     featured: false,
     ingredients: 'Farina, ricotta di pecora, zucchero, cioccolato, scorza d\'arancia candita, vaniglia',
@@ -87,7 +86,7 @@ export const products = [
     description: 'Strati di melanzane fritte con formaggio, basilico e sugo di pomodoro. Un grande classico della cucina siciliana.',
     shortDescription: 'Melanzane a strati con pomodoro e formaggio',
     price: 11.90,
-    image: 'https://images.unsplash.com/photo-1626711934535-9749ea30dba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFybWlnaWFuYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    image: 'https://images.unsplash.com/photo-1629221598041-8e271c8c68d0?ixlib=rb-4.0.3',
     category: 'secondi',
     featured: true,
     ingredients: 'Melanzane, pomodoro, mozzarella, parmigiano, basilico, olio extravergine d\'oliva, sale',
