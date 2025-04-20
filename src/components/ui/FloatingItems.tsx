@@ -1,14 +1,18 @@
 
 import { useEffect, useState } from 'react';
-import { Leaf, Cherry } from 'lucide-react';  // Replace Tomato with Cherry
+import { Leaf, Cherry } from 'lucide-react';
 
-type ItemType = 'leaf' | 'cherry';  // Update type to match
+type ItemType = 'leaf' | 'cherry';
 
 interface FloatingItemsProps {
   items?: ItemType[];
+  zIndex?: number;
 }
 
-const FloatingItems = ({ items = ['leaf', 'cherry'] }: FloatingItemsProps) => {
+const FloatingItems = ({ 
+  items = ['leaf', 'cherry'], 
+  zIndex = -1  // Default to behind content
+}: FloatingItemsProps) => {
   const [floatingItems, setFloatingItems] = useState<Array<{ id: number; style: React.CSSProperties; type: ItemType }>>([]);
 
   useEffect(() => {
@@ -25,15 +29,15 @@ const FloatingItems = ({ items = ['leaf', 'cherry'] }: FloatingItemsProps) => {
         color: type === 'leaf' ? '#33B249' : '#FF4646',
         opacity: Math.random() * 0.5 + 0.3,
         transform: `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.5 + 0.5})`,
-        zIndex: 1,  // Changed to 1 to be above background but below content
+        zIndex: zIndex,
       };
 
-      setFloatingItems(prev => [...prev.slice(-8), { id, style, type }]);  // Reduced to keep only last 8 items
+      setFloatingItems(prev => [...prev.slice(-5), { id, style, type }]);  // Reduced to max 5 items
     };
 
-    const interval = setInterval(createItem, 4000);  // Increased interval to 4 seconds
+    const interval = setInterval(createItem, 4000);
     return () => clearInterval(interval);
-  }, [items]);
+  }, [items, zIndex]);
 
   return (
     <>

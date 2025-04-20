@@ -1,15 +1,16 @@
-
 import { products } from "@/data/products";
 import ProductCard from "@/components/product/ProductCard";
 import { Link } from "react-router-dom";
+import FloatingItems from "@/components/ui/FloatingItems";
 
 const FeaturedProducts = () => {
   // Filter products where featured is true
   const featuredProducts = products.filter(product => product.featured);
   
   return (
-    <section className="py-16 bg-cream">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-cream relative">
+      <FloatingItems items={['leaf', 'cherry']} zIndex={-1} />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-playfair font-bold mb-2">
             Le nostre specialità
