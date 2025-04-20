@@ -1,14 +1,14 @@
 
 import { useEffect, useState } from 'react';
-import { Leaf, Tomato } from 'lucide-react';
+import { Leaf, Cherry } from 'lucide-react';  // Replace Tomato with Cherry
 
-type ItemType = 'leaf' | 'tomato';
+type ItemType = 'leaf' | 'cherry';  // Update type to match
 
 interface FloatingItemsProps {
   items?: ItemType[];
 }
 
-const FloatingItems = ({ items = ['leaf', 'tomato'] }: FloatingItemsProps) => {
+const FloatingItems = ({ items = ['leaf', 'cherry'] }: FloatingItemsProps) => {
   const [floatingItems, setFloatingItems] = useState<Array<{ id: number; style: React.CSSProperties; type: ItemType }>>([]);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const FloatingItems = ({ items = ['leaf', 'tomato'] }: FloatingItemsProps) => {
             size={24}
           />
         ) : (
-          <Tomato
+          <Cherry
             key={item.id}
             style={item.style}
             size={24}

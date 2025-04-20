@@ -1,3 +1,4 @@
+
 import Layout from "@/components/layout/Layout";
 import { products } from "@/data/products";
 import ProductCard from "@/components/product/ProductCard";
