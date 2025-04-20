@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FiShoppingCart } from "react-icons/fi";
 
-interface ProductCardProps {
+export interface ProductCardProps {
   id: number;
   name: string;
   description: string;

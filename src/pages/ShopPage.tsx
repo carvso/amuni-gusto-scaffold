@@ -13,7 +13,16 @@ const ShopPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard 
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              description={product.description}
+              shortDescription={product.shortDescription}
+              price={product.price}
+              image={product.image}
+              category={product.category}
+            />
           ))}
         </div>
       </div>
