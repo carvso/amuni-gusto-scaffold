@@ -25,13 +25,13 @@ const FloatingItems = ({ items = ['leaf', 'cherry'] }: FloatingItemsProps) => {
         color: type === 'leaf' ? '#33B249' : '#FF4646',
         opacity: Math.random() * 0.5 + 0.3,
         transform: `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.5 + 0.5})`,
-        zIndex: 0,
+        zIndex: 1,  // Changed to 1 to be above background but below content
       };
 
-      setFloatingItems(prev => [...prev.slice(-20), { id, style, type }]);
+      setFloatingItems(prev => [...prev.slice(-8), { id, style, type }]);  // Reduced to keep only last 8 items
     };
 
-    const interval = setInterval(createItem, 2500);
+    const interval = setInterval(createItem, 4000);  // Increased interval to 4 seconds
     return () => clearInterval(interval);
   }, [items]);
 
