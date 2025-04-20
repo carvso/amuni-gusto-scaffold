@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
@@ -41,10 +40,10 @@ const Hero = () => {
               className="text-base border-2 border-pomodoro-red text-pomodoro-red hover:bg-pomodoro-red/5"
               asChild
             >
-              <a href="#how-it-works">
+              <Link to="/how-it-works">
                 Come funziona
                 <ChevronDown className="ml-2" />
-              </a>
+              </Link>
             </Button>
           </div>
 
