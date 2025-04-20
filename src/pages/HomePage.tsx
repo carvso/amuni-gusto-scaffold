@@ -6,10 +6,12 @@ import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Testimonials from "@/components/home/Testimonials";
 import TrustSignals from "@/components/home/TrustSignals";
 import Values from "@/components/home/Values";
+import FloatingItems from "@/components/ui/FloatingItems";
 
 const HomePage = () => {
   return (
     <Layout>
+      <FloatingItems />
       <Hero />
       <HowItWorks />
       <FeaturedProducts />

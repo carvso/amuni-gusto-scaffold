@@ -1,15 +1,14 @@
-
 import Layout from "@/components/layout/Layout";
 import { products } from "@/data/products";
 import ProductCard from "@/components/product/ProductCard";
-import FloatingLeaves from "@/components/ui/FloatingLeaves";
+import FloatingItems from "@/components/ui/FloatingItems";
 import { Button } from "@/components/ui/button";
 import { Leaf } from "lucide-react";
 
 const ShopPage = () => {
   return (
     <Layout>
-      <FloatingLeaves />
+      <FloatingItems items={['leaf']} />
       <div className="container mx-auto px-4 py-12 relative">
         {/* Hero section */}
         <div className="text-center mb-12 relative z-10">
