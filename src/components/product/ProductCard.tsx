@@ -30,6 +30,10 @@ const ProductCard = ({
             src={image} 
             alt={name} 
             className="w-full h-52 object-cover"
+            onError={(e) => {
+              console.error(`Failed to load image: ${image}`);
+              e.currentTarget.src = '/placeholder.svg';
+            }}
           />
         </Link>
         <span className="absolute top-2 left-2 bg-basil-green text-white text-xs py-1 px-2 rounded uppercase tracking-wider font-bold">
