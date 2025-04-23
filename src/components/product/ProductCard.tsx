@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FiShoppingCart } from "react-icons/fi";
+import { useState } from "react";
 
 export interface ProductCardProps {
   id: number;
@@ -21,19 +22,23 @@ const ProductCard = ({
   image,
   category
 }: ProductCardProps) => {
+  const [imageError, setImageError] = useState(false);
+  
+  const handleImageError = () => {
+    console.error(`Failed to load image: ${image}`);
+    setImageError(true);
+  };
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
       {/* Product image with category tag */}
       <div className="relative">
         <Link to={`/product/${id}`} className="block">
           <img 
-            src={image} 
+            src={imageError ? '/placeholder.svg' : image} 
             alt={name} 
             className="w-full h-52 object-cover"
-            onError={(e) => {
-              console.error(`Failed to load image: ${image}`);
-              e.currentTarget.src = '/placeholder.svg';
-            }}
+            onError={handleImageError}
           />
         </Link>
         <span className="absolute top-2 left-2 bg-basil-green text-white text-xs py-1 px-2 rounded uppercase tracking-wider font-bold">

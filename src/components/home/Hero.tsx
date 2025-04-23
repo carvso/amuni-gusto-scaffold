@@ -66,7 +66,7 @@ const Hero = () => {
       <div className="hidden lg:flex w-1/2 h-full bg-sage/10">
         <div className="relative h-full w-full overflow-hidden">
           <img 
-            src="/lovable-uploads/2d288f0c-7c11-4591-ad1b-d4b986be8765.png"
+            src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
             alt="Pasta fresca siciliana" 
             className="absolute inset-0 w-full h-full object-cover"
           />
