@@ -1,3 +1,4 @@
+
 // Mock product data for Amunì Group e-commerce
 export const products = [
   {
@@ -106,7 +107,7 @@ export const products = [
     description: 'Bucatini con sarde, finocchietto selvatico, pinoli e uvetta. Un piatto iconico della tradizione palermitana.',
     shortDescription: 'Bucatini con sarde, finocchietto e pinoli',
     price: 13.90,
-    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3',
+    image: '/lovable-uploads/4cfd93e2-d20a-45f2-9bf6-58d7b2cd3856.png',
     category: 'primi',
     featured: false,
     ingredients: 'Bucatini, sarde, finocchietto selvatico, pinoli, uvetta, cipolla, zafferano, olio extravergine d\'oliva, sale, pepe',
@@ -126,7 +127,7 @@ export const products = [
     description: 'Fresca insalata di arance, finocchi, olive nere e cipolla rossa. Un contorno leggero e ricco di sapore.',
     shortDescription: 'Arance con finocchi, olive e cipolla rossa',
     price: 8.90,
-    image: 'https://images.unsplash.com/photo-1596567595859-ba486e0b5d9b?ixlib=rb-4.0.3',
+    image: '/lovable-uploads/e9efe38f-eeb2-4bdd-9759-1b0b5ff58ba2.png',
     category: 'contorni',
     featured: false,
     ingredients: 'Arance, finocchi, olive nere, cipolla rossa, olio extravergine d\'oliva, sale, pepe',
@@ -146,7 +147,7 @@ export const products = [
     description: 'Fettine di melanzane arrotolate e ripiene di ricotta, basilico e pomodorini secchi. Un antipasto saporito e elegante.',
     shortDescription: 'Melanzane ripiene di ricotta e pomodorini',
     price: 10.50,
-    image: 'https://images.unsplash.com/photo-1634487359989-3e90c9432133?ixlib=rb-4.0.3',
+    image: '/lovable-uploads/ab24b8c8-d8b5-47b9-9834-583539afa987.png',
     category: 'antipasti',
     featured: false,
     ingredients: 'Melanzane, ricotta, basilico, pomodorini secchi, parmigiano, olio extravergine d\'oliva, sale, pepe',
