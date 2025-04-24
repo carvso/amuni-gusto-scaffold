@@ -6,7 +6,7 @@ import { IoFlameOutline } from "react-icons/io5";
 const steps = [
   {
     icon: <GiKnifeFork className="w-12 h-12" />,
-    title: "Scegli i piatti",
+    title: "Ordina i tuoi piatti",
     description: "Seleziona i tuoi piatti preferiti dal nostro menù di specialità siciliane"
   },
   {

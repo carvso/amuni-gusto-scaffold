@@ -29,13 +29,16 @@ const ProductCard = ({
     setImageError(true);
   };
 
+  // Utilizziamo un'immagine di placeholder affidabile
+  const placeholderImage = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-      {/* Product image with category tag */}
+      {/* Immagine prodotto con tag categoria */}
       <div className="relative">
         <Link to={`/product/${id}`} className="block">
           <img 
-            src={imageError ? '/placeholder.svg' : image} 
+            src={imageError ? placeholderImage : image} 
             alt={name} 
             className="w-full h-52 object-cover"
             onError={handleImageError}
@@ -46,7 +49,7 @@ const ProductCard = ({
         </span>
       </div>
 
-      {/* Product details */}
+      {/* Dettagli prodotto */}
       <div className="p-4">
         <Link to={`/product/${id}`} className="block mb-1">
           <h3 className="text-lg font-playfair font-semibold text-gray-800 hover:text-pomodoro-red transition-colors">
