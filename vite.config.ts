@@ -12,7 +12,7 @@ export default defineConfig(({ mode }: { mode: string }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === 'production' ? '/amuni-gusto-scaffold/' : '/',
+  base: '/amuni-gusto-scaffold/',
   plugins: [
     react(),
   ],
