@@ -13,7 +13,7 @@ export default defineConfig(({ mode }: { mode: string }) => ({
     host: "::",
     port: 8080,
   },
-  base: process.env.NODE_ENV === 'production' ? '/amuni-gusto-scaffold/' : '/',
+  base: mode === 'production' ? '/amuni-gusto-scaffold/' : '/',
   plugins: [
     react(),
     mode === 'development' &&
@@ -28,5 +28,12 @@ export default defineConfig(({ mode }: { mode: string }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name][extname]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
+      },
+    },
   }
 }));
