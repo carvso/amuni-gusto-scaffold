@@ -13,7 +13,7 @@ export default defineConfig(({ mode }: { mode: string }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/amuni-gusto-scaffold/',
+  base: process.env.NODE_ENV === 'production' ? '/amuni-gusto-scaffold/' : '/',
   plugins: [
     react(),
     mode === 'development' &&
@@ -24,4 +24,9 @@ export default defineConfig(({ mode }: { mode: string }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+  }
 }));
