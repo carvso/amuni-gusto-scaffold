@@ -11,6 +11,10 @@ import HowItWorksPage from "./pages/HowItWorksPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
+// Placeholder per le nuove pagine
+const AziendePage = () => <div>Pagina Aziende</div>;
+const HorecaPage = () => <div>Pagina HoReCa</div>;
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -25,6 +29,8 @@ const App = () => (
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/aziende" element={<AziendePage />} />
+          <Route path="/horeca" element={<HorecaPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

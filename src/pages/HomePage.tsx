@@ -5,19 +5,23 @@ import HowItWorks from "@/components/home/HowItWorks";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Testimonials from "@/components/home/Testimonials";
 import TrustSignals from "@/components/home/TrustSignals";
-import Values from "@/components/home/Values";
-import FloatingItems from "@/components/ui/FloatingItems";
+import CustomerSegment from "@/components/home/CustomerSegment";
+import PlanSelection from "@/components/home/PlanSelection";
+import AdvantageSection from "@/components/home/AdvantageSection";
+import StickyActions from "@/components/ui/StickyActions";
 
 const HomePage = () => {
   return (
     <Layout>
-      <FloatingItems />
       <Hero />
+      <CustomerSegment />
       <HowItWorks />
+      <PlanSelection />
       <FeaturedProducts />
+      <AdvantageSection />
       <Testimonials />
-      <Values />
       <TrustSignals />
+      <StickyActions />
     </Layout>
   );
 };
